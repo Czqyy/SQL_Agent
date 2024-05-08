@@ -10,7 +10,12 @@ class SQLTool():
 	def query(sql_query):
 		"""Useful to execute a SQL query in a MySQL database and return the query result
 		The given SQL query must be in exact MySQL syntax."""
-		cnx = mysql.connector.connect(user='root', password='password', host='127.0.0.1', database='command_centerdb')
+		cnx = mysql.connector.connect(
+			user=os.environ["USER"], 
+			password=os.environ["PASSWORD"], 
+			host=os.environ["HOST"], 
+			database=os.environ["DB"]
+		)
 		cursor = cnx.cursor()
 		result = ""
 		try:

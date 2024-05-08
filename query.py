@@ -20,7 +20,6 @@ generator = Agent(
 	allow_delegation=False,
     tools=[SQLTool().query],
     verbose=True
-	# llm=language_model
 )
 
 json_formattor = Agent(
@@ -30,7 +29,6 @@ json_formattor = Agent(
     	Given a list of data, you MUST convert it to a JSON object.""",
     allow_delegation=False,
     verbose=True
-    # llm=language_model
 )
 
 task1 = Task(
