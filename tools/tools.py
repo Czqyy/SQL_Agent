@@ -11,8 +11,8 @@ class SQLTool():
 		"""Useful to execute a SQL query in a MySQL database and return the query result
 		The given SQL query must be in exact MySQL syntax."""
 		cnx = mysql.connector.connect(
-			user=os.environ["USER"], 
-			password=os.environ["PASSWORD"], 
+			user=os.environ["DB_USER"], 
+			password=os.environ["USER_PASSWORD"], 
 			host=os.environ["HOST"], 
 			database=os.environ["DB"]
 		)
